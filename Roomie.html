@@ -222,64 +222,8 @@
         display: none;
     }
 
-    .icon{
-    display: none;
-}
-.icon2{
-    display: none;
-}
-    @media screen and (max-width: 600px) {
-    .navbar a {
-        display: none;
-        color: #ffffff;
-    }
-    .icon {
-        display: block;
-    }
-    .icon2{
-        display: none;
-    }
-    .navbar.responsive {
-        display: block;
-        position: absolute;
-        width: 100%;
-        background-color: #333;
-        z-index: 9999; /* Increase z-index to ensure navbar is above background content */
-        text-align: center;
-        height: 100vh;
-        left: 0;
-        top:0;
-    }
-    .navbar.responsive{
-        padding-top: 50px;
-    }
-    .navbar.responsive a {
-        margin-top: 10px;
-        width: 100%;
-        display: flex ;
-        flex-direction: column ;
-        align-items: center;
-        justify-content: center;
-    }
-    .navbar.responsive .icon {
-        position: absolute;
-        top: 10px;
-        right: 10px;
-    }
-    .icon2 {
-        display: "none";
-        position: absolute;
-        top: 40px;
-        right: 50px; /* Change to right: 10px; */
-        z-index: 9999; /* Ensure it's above other content */
-    }
-}
 
-/* Ensure background content is behind the navbar */
-body {
-    position: relative;
-    z-index: 1; /* Ensure body content is behind navbar */
-}
+
         @media only screen and (max-width: 768px) {
     .heading {
         font-size: 20px; /* Adjust the font size for smaller screens */
@@ -292,7 +236,7 @@ body {
         line-height: 22px; /* Adjusted line height */
         margin-left: 75px; /* Adjusted margin for smaller screens */
     }
-    
+
     header{
         display: flex;
         align-items: center;
@@ -377,6 +321,66 @@ body {
 }
 
 
+.icon{
+    display: none;
+}
+.icon2{
+    display: none;
+}
+    @media screen and (max-width: 600px) {
+    .navbar a {
+        display: none;
+        color: #ffffff;
+    }
+    .icon {
+        display: block;
+    }
+    .icon2{
+        display: none;
+    }
+    .navbar.responsive {
+        display: block;
+        position: absolute;
+        width: 100%;
+        background-color: #333;
+        z-index: 9999; /* Increase z-index to ensure navbar is above background content */
+        text-align: center;
+        height: 100vh;
+        left: 0;
+        top:0;
+    }
+    .navbar.responsive{
+        padding-top: 50px;
+    }
+    .navbar.responsive a {
+        margin-top: 10px;
+        width: 100%;
+        display: flex ;
+        flex-direction: column ;
+        align-items: center;
+        justify-content: center;
+    }
+    .navbar.responsive .icon {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+    }
+    .icon2 {
+        display: "none";
+        position: absolute;
+        top: 40px;
+        right: 50px; /* Change to right: 10px; */
+        z-index: 9999; /* Ensure it's above other content */
+    }
+}
+
+/* Ensure background content is behind the navbar */
+body {
+    position: relative;
+    z-index: 1; /* Ensure body content is behind navbar */
+}
+
+
 
 
 </style>
@@ -386,7 +390,7 @@ body {
     <!-- nav bar -->
     <header>
         <div>
-           <img src="../G_logo-circle.png" alt="logo" style="height: 60px;width: 60px;" />
+           <img src="./G_logo-circle.png" alt="logo" style="height: 60px;width: 60px;" />
         </div>
         <div>
             <div class="navbar" id="myNavbar" >
@@ -407,7 +411,7 @@ body {
     </header>
     
     <script>
- function toggleNavbar() {
+         function toggleNavbar() {
     var x = document.getElementById("myNavbar");
     var closeIcon = document.getElementById("closeIcon");
     if (x.className.indexOf("responsive") === -1) {
@@ -423,7 +427,7 @@ body {
 
     <!-- First hero image -->
     <div class="image-container first-image-container" id="top">
-    <img class="hero-image" src="/dropppp.png" alt="First hero image" style="max-width: 100%; height: auto;">
+    <img class="hero-image" src="./Rooom.png" alt="First hero image" style="max-width: 100%; height: auto;">
     </div>
 
 
@@ -435,7 +439,7 @@ body {
     <!-- Image display -->
     <div class="image-container second-image-container">
     <!-- Replace 'image.jpg' with the path to your image -->
-    <img src="/Dropboxx - Single Frame.png" alt="Dropboxx casestudy" style="max-width: 100%; height: auto;">
+    <img src="/Roomie - Single Frame.png" alt="Dropboxx casestudy" style="max-width: 100%; height: auto;">
     </div>
 
 
@@ -448,7 +452,7 @@ body {
     
 <!-- Button linking to Behance -->
 <div class="button-container">
-    <a class="button" href="https://www.behance.net/gallery/193332615/Dropboxx-Case-Study/" target="_blank">View on Behance</a>
+    <a class="button" href="https://www.behance.net/gallery/194461313/Roomie-Case-Study" target="_blank">View on Behance</a>
 </div>
 
 <!-- Content goes here -->
