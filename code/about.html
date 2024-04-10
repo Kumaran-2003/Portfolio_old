@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="shortcut icon" type="image/jpg" href="/G_logo-circle.png"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+    <style>
+    
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .content {
+            display: flex;
+            flex-direction: row-reverse; /* To align photo to the right on desktop */
+            align-items: center;
+        }
+
+        .text {
+            flex: 1;
+            padding: 20px;
+        }
+
+        .photo {
+            flex: 1;
+            text-align: center;
+        }
+
+        .photo img {
+            max-width: 100%;
+            height: auto;
+            margin-top: 100px;
+        }
+
+        @media (max-width: 768px) {
+            .content {
+                flex-direction: column; /* Change to column layout on mobile */
+            }
+
+            .photo {
+                text-align: center; /* Center align photo on mobile */
+            }
+        }
+
+        .heading {
+            color: #737373;
+            font-family: sans-serif;
+            font-size: 30px;
+            line-height: 32px;
+            letter-spacing: -1px;
+            font-weight: 500;
+            font-style: normal;
+            text-transform: none;
+            text-decoration: none;
+            text-align: start;
+            text-indent: 0px;
+        }
+
+        .heading2 {
+            color: #737373;
+            font-family: sans-serif;
+            font-size: 30px;
+            line-height: 32px;
+            letter-spacing: -1px;
+            font-weight: 500;
+            font-style: normal;
+            text-transform: none;
+            text-decoration: none;
+            text-align: start;
+            text-indent: 0px;
+        }
+
+        .link {
+            color: #737373;
+            font-family: sans-serif;
+            font-size: 30px;
+            line-height: 32px;
+            letter-spacing: 1px;
+            font-weight: 500;
+            font-style: normal;
+            text-transform: none;
+            text-decoration: underline;
+            text-align: start;
+            text-indent: 0px;
+            margin-left: 380px;
+        }
+
+        .hero-container {
+            display: flex;
+            justify-content: left;
+            align-items: center;
+            margin-top: 50px; /* Reduced space between hero image and paragraph text */
+            height: 30vh; /* Adjust the height of the hero section */
+            padding-left: 25%;
+            
+        }
+
+        .outer-circle {
+            width: 200px; /* Diameter of the outer circle */
+            height: 200px; /* Diameter of the outer circle */
+            background-color: #f5f5f5; /* Color of the outer circle */
+            border-radius: 50%; /* Make it a circle */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 0px; /* Adjust margin bottom as needed */
+        }
+
+        .inner-circle {
+            width: 150px; /* Diameter of the inner circle */
+            height: 150px; /* Diameter of the inner circle */
+            background-color: #ffffff; /* Color of the inner circle */
+            border-radius: 50%; /* Make it a circle */
+            overflow: hidden;
+        }
+
+        .inner-circle img {
+            width: 100%; /* Make the image fill the inner circle */
+            height: auto;
+            border-radius: 50%; /* Make it a circle */
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+
+        h2 {
+            font-size: 32px;
+            font-weight: 500;
+            margin-bottom: 10px;
+        }
+
+        .section {
+            margin-bottom: 150px;
+        }
+
+        .cards {
+            display: flex;
+            /* margin-right: 100px; Adjusted horizontal space between cards */
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .card {
+            flex-basis: calc(45% - 10px); /* Two cards in a row for large screens */
+            margin-bottom: 20px;
+            background-color: #f0f0f0;
+            border-radius: 20px;
+            overflow: hidden;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .card img {
+            width: 100%;
+            height: auto;
+            border-radius: 20px;
+            min-height: 280px;
+            min-width: 250px;
+        }
+
+        .card-content {
+            padding: 0px 15px; /* Adjusted padding */
+            color: #737373;
+            font-family: sans-serif;
+            font-size: 24px;
+            line-height: 0px;
+            letter-spacing: -1px;
+            font-weight: 500; /* Semi-bold */
+            font-style: normal;
+            text-transform: none;
+            text-decoration: none;
+            text-align: start;
+            text-indent: 0px;
+        }
+
+        /* Hovering effect */
+        .card:hover {
+            transform: translateY(-2px);
+        }
+
+        .cards a {
+            text-decoration: none;
+        }
+
+        @media screen and (max-width: 768px) {
+            .card {
+                flex-basis: calc(100% - 20px); /* One card in a row for small screens */
+            }
+
+            .ltext {
+                margin: 10% 10%;
+            }
+        }
+
+        @media screen and (min-width: 768px) {
+            .section-designs .card {
+                flex-basis: calc(33.33% - 10px); /* Three cards in a row for large screens in the Designs section */
+            }
+        }
+
+        @media only screen and (max-width: 768px) {
+            .link {
+                font-size: 24px;
+                line-height: 26px;
+                margin-left: 75px; /* Adjust margin for smaller screens */
+            }
+        }
+
+        @media only screen and (max-width: 480px) {
+            .link {
+                font-size: 12px; /* Further decrease font size for even smaller screens */
+                line-height: 18px;
+                margin-left: 30px;
+            }
+        }
+
+        .link:hover {
+            color: #333; /* Change color on hover */
+            text-decoration: none; /* Remove underline on hover */
+        }
+
+        /* nav bar css */
+        .navbar {
+            overflow: hidden;
+        }
+
+        .navbar a {
+            float: left;
+            display: block;
+            color: black;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-family: sans-serif; /* Add this line to change font */
+        }
+
+        .navbar a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        .navbar a.active {
+            /* background-color: #4CAF50; */
+            color: black;
+            text-decoration: underline;
+        }
+
+        .navbar .icon {
+            display: none;
+        }
+
+        .ltext {
+            margin: 20%;
+        }
+
+        .icon{
+    display: none;
+}
+.icon2{
+    display: none;
+}
+    @media screen and (max-width: 600px) {
+    .navbar a {
+        display: none;
+        color: #ffffff;
+    }
+    .icon {
+        display: block;
+    }
+    .icon2{
+        display: none;
+    }
+    .navbar.responsive {
+        display: block;
+        position: absolute;
+        width: 100%;
+        background-color: #333;
+        z-index: 9999; /* Increase z-index to ensure navbar is above background content */
+        text-align: center;
+        height: 100vh;
+        left: 0;
+        top:0;
+    }
+    .navbar.responsive{
+        padding-top: 50px;
+    }
+    .navbar.responsive a {
+        margin-top: 10px;
+        width: 100%;
+        display: flex ;
+        flex-direction: column ;
+        align-items: center;
+        justify-content: center;
+    }
+    .navbar.responsive .icon {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+    }
+    .icon2 {
+        display: "none";
+        position: absolute;
+        top: 40px;
+        right: 50px; /* Change to right: 10px; */
+        z-index: 9999; /* Ensure it's above other content */
+    }
+}
+
+/* Ensure background content is behind the navbar */
+body {
+    position: relative;
+    z-index: 1; /* Ensure body content is behind navbar */
+}
+
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 40px;
+        }
+
+        .hero {
+            margin: 0px;
+            padding: 2% 25%; /* Default padding for desktop */
+        }
+
+        @media screen and (max-width: 768px) {
+            .hero {
+                padding: 10%; /* Reduced padding for mobile screens */
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            .hero-container {
+                padding-left: 10%; /* Adjust the padding for smaller screens */
+                margin-top: 10%;
+                margin-bottom: 0%;
+            }
+        }
+
+        .outer-circle {
+            width: 150px; /* Reduce the diameter of the outer circle */
+            height: 150px; /* Reduce the diameter of the outer circle */
+        }
+
+        .inner-circle {
+            width: 100px; /* Reduce the diameter of the inner circle */
+            height: 100px; /* Reduce the diameter of the inner circle */
+        }
+
+        .download-button {
+            display: inline-block;
+            background-color: #007bff; /* Blue color, you can change it to your preferred color */
+            color: #fff; /* White text color */
+            padding: 10px 20px; /* Padding around the text */
+            border: none; /* Remove button border */
+            border-radius: 5px; /* Rounded corners */
+            cursor: pointer; /* Change cursor to pointer on hover */
+            text-decoration: none; /* Remove default underline */
+            font-size: 16px; /* Font size */
+            font-weight: regular; /* Bold font weight */
+            transition: background-color 0.3s ease; /* Smooth transition on hover */
+        }
+
+        .download-button:hover {
+            background-color: #0056b3; /* Darker blue color on hover */
+        }
+
+        @media (max-width: 768px) {
+            .ltext {
+                margin: 10%; /* Reduce margin on mobile screens */
+            }
+        }
+
+        /* Social Icons */
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .social-icons a {
+            margin: 0 10px;
+            color: #737373;
+            font-size: 24px;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            color: #333;
+        }
+        
+        .mtext {
+            text-align: center; /* Align center on desktop screens */
+            margin-top: 10px; /* Reduced space between paragraph and mail id */
+        }
+
+        .mtext .heading {
+            font-size: 20px; /* Font size 20px on mobile screens */
+        }
+
+        @media (min-width: 768px) {
+            .mtext .heading {
+                font-size: 32px; /* Increase font size on desktop screens */
+            }
+        }
+
+        .heading:hover {
+            text-decoration: underline;
+        }
+
+
+
+
+
+
+
+    </style>
+</head>
+<body>
+    <!-- nav bar -->
+    <header>
+        <div>
+           <img src="../G_logo-circle.png" alt="logo" style="height: 60px;width: 60px;" />
+        </div>
+        <div>
+            <div class="navbar" id="myNavbar" >
+                <a  href="./index.html">Home</a>
+                <a href="./about.html">About</a>
+                <a href="./Projects.html">Work</a>
+                <!-- <a href="#con">Contact</a> -->
+                
+            </div>
+            <a href="javascript:void(0);" class="icon2" id="closeIcon" onclick="toggleNavbar()">
+                <img src="https://img.icons8.com/material-rounded/24/000000/multiply.png"/>
+            </a>
+            <a href="javascript:void(0);" class="icon" onclick="toggleNavbar()">
+                <img src="https://img.icons8.com/metro/26/000000/menu.png"/>
+            </a>
+            
+        </div>
+    </header>
+    
+    <script>
+ function toggleNavbar() {
+    var x = document.getElementById("myNavbar");
+    var closeIcon = document.getElementById("closeIcon");
+    if (x.className.indexOf("responsive") === -1) {
+        x.className += " responsive";
+        closeIcon.style.display = "block"; // Display the close icon
+    } else {
+        x.className = x.className.replace(" responsive", "");
+        closeIcon.style.display = "none"; // Hide the close icon
+    }
+}
+    </script>
+
+    <script>
+        function downloadResume() {
+            // Replace 'resume.pdf' with the path to your resume file
+            var resumeUrl = '../GNANASAMBANDAM_RESUME.pdf';
+            var link = document.createElement('a');
+            link.href = resumeUrl;
+            link.setAttribute('download', 'Gnanasambandam_Resume.pdf');
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+    </script>
+
+    <div class="container">
+        <div class="content">
+
+            <div class="text" style="font-family: sans-serif;">
+                <h2>I'm Gnanasambandam <br>a UI/UX Designer from Coimbatore</h2>
+                <h3 class="heading2" style="font-size: 24px;">I specialize in UI/UX Design, and I have a passion for creating digital products that are seamless and impactful.</h3>
+
+                <div>
+                    <button class="download-button" onclick="downloadResume()">Download Resume</button>
+                </div>
+                
+            </div>
+
+            <div class="photo">
+                <img src="../Professional Photo.png" alt="Profile Photo">
+
+            </div>
+
+        </div>
+    </div>
+
+    <div class="ltext">
+        <h3 class="heading2" style="font-size: 24px; text-align:center">Understanding the human experience is essential for creating useful and effective products. I enjoy using my skill set to empower people to accomplish their goals. I create digital experiences that make life easier.</h3>
+    </div>
+
+    
+    <div class="mtext">
+        <a class="heading" href="mailto:kumaranrathinavelu2003@gmail.com"><br>kumaranrathinavelu2003@gmail.com<br></a>
+    </div>
+    <div class="social-icons"style="gap: 10px;" >
+        <!-- Add your social icons with links here -->
+        <a href="https://www.linkedin.com/in/gnanasambandamsr/" target="_blank"><img src="../linkedin.png" alt="LinkedIn"></a>
+        <a href="https://www.behance.net/kumaru" target="_blank"><img src="../behance.png" alt="Behance"></a>
+        <a href="https://dribbble.com/kumaran_16" target="_blank"><img src="../dribbble.png" alt="Dribbble"></a>
+        <a href="https://www.instagram.com/kumaru.4n/" target="_blank"><img src="../instagram.png" alt="Instagram"></a>
+    </div>
+    <br>
+        <p style="text-align: center;">Designing with Heart, Inspiring with Soul ❤️</p>
+        <br><br><br>
+</body>
+</html>
