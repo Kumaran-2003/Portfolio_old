@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="shortcut icon" type="image/jpg" href="/G_logo-circle.png"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Form</title>
+  <style>
+    
+    
+    .container {
+      max-width: 500px;
+      max-height: 330px;
+      margin: 50px 20px; /* Add margin left and right */
+      background-color: #fff;
+      padding: 30px 20px;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      font-family: sans-serif;
+      color: #737373;
+
+
+    }
+    
+    .container1 {
+      width: 50%;
+      /* background-color: pink; */
+      /* margin: 50px 20px; Add margin left and right */
+      padding: 20px;
+      border-radius: 5px;
+
+    }
+    
+    .heading {
+      color: #737373;
+      font-family: sans-serif;
+      font-size: 30px;
+      line-height: 32px;
+      letter-spacing: -1px;
+      font-weight: 500;
+      font-style: normal;
+      text-transform: none;
+      text-decoration: none;
+      text-align: start;
+      text-indent: 0px;
+      margin-bottom: 20px; /* Add margin bottom */
+    }
+    
+    .heading2 {
+      color: #737373;
+      font-family: sans-serif;
+      font-size: 24px;
+      line-height: 32px;
+      letter-spacing: -1px;
+      font-weight: 500;
+      font-style: normal;
+      text-transform: none;
+      text-decoration: none;
+      text-align: start;
+      text-indent: 0px;
+      margin-bottom: 20px; /* Add margin bottom */
+    }
+
+    input[type="text"], textarea {
+      
+      width: calc(100% - 20px); /* Adjust width to account for margins */
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 2px solid #737373;
+      border-radius: 5px;
+      box-sizing: border-box;
+    }
+    
+    input[type="submit"] {
+      background-color: #0277B5;
+      color: white;
+      padding: 15px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    
+    input[type="submit"]:hover {
+      background-color: #005580;
+    }
+
+    .navbar {
+        overflow: hidden;
+    }
+
+    .navbar a {
+        float: left;
+        display: block;
+        color: black;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-family: sans-serif; /* Add this line to change font */
+    }
+
+    .navbar a:hover {
+        background-color: #ddd;
+        color: black;
+    }
+
+    .navbar a.active {
+        /* background-color: #4CAF50; */
+        color: black;
+        text-decoration: underline;
+        
+    }
+
+    .navbar .icon {
+        display: none;
+    }
+    .head{
+      display: flex;;
+      align-items: center;
+      justify-content: space-between;
+      padding: 32px;
+    }
+    .form{
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+    }
+    
+    @media screen and (max-width: 600px) {
+
+      .form{
+      display: flex;;
+      flex-direction: column;
+    }
+      
+      .container {
+        width: 80%; /* Adjust container width */
+        margin: 20px auto; /* Center container */
+      }
+      
+      .container1 {
+        width: 80%; /* Adjust container width */
+        margin: 20px auto; /* Center container */
+      }
+      
+      input[type="text"], textarea {
+        width: calc(100% - 20px); /* Adjust width to account for margins */
+      }
+      
+      .heading {
+        text-align: center; /* Center align heading */
+        margin-bottom: 10px; /* Reduce bottom margin */
+      }
+    }
+
+    .icon{
+    display: none;
+}
+.icon2{
+    display: none;
+}
+    @media screen and (max-width: 600px) {
+    .navbar a {
+        display: none;
+        color: #ffffff;
+    }
+    .icon {
+        display: block;
+    }
+    .icon2{
+        display: none;
+    }
+    .navbar.responsive {
+        display: block;
+        position: absolute;
+        width: 100%;
+        background-color: #333;
+        z-index: 9999; /* Increase z-index to ensure navbar is above background content */
+        text-align: center;
+        height: 100vh;
+        left: 0;
+        top:0;
+    }
+    .navbar.responsive{
+        padding-top: 50px;
+    }
+    .navbar.responsive a {
+        margin-top: 10px;
+        width: 100%;
+        display: flex ;
+        flex-direction: column ;
+        align-items: center;
+        justify-content: center;
+    }
+    .navbar.responsive .icon {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+    }
+    .icon2 {
+        display: "none";
+        position: absolute;
+        top: 40px;
+        right: 50px; /* Change to right: 10px; */
+        z-index: 9999; /* Ensure it's above other content */
+    }
+}
+
+/* Ensure background content is behind the navbar */
+body {
+    position: relative;
+    z-index: 1; /* Ensure body content is behind navbar */
+}
+
+  </style>
+</head>
+
+<body>
+
+    <header class="head">
+        <div>
+           <img src="./G_logo-circle.png" alt="logo" style="height: 60px;width: 60px;" />
+        </div>
+        <div>
+            <div class="navbar" id="myNavbar" >
+                <a  href="./index.html">Home</a>
+                <a href="./about.html">About</a>
+                <a href="./Projects.html">Work</a>
+                <a href="./c.html">Contact</a>
+            </div>
+            <a href="javascript:void(0);" class="icon2" id="closeIcon" onclick="toggleNavbar()">
+                <img src="https://img.icons8.com/material-rounded/24/000000/multiply.png"/>
+            </a>
+            <a href="javascript:void(0);" class="icon" onclick="toggleNavbar()">
+                <img src="https://img.icons8.com/metro/26/000000/menu.png"/>
+            </a>
+            
+        </div>
+    </header>
+    <br>
+
+    <div class="form">
+      <div class="container1">
+        <h3 class="heading"style="Color:black"   >Would love to hear from you,<br> get in touch</h3>
+        <h3 class="heading2" style="margin-top: 20px;">Feel free to drop me a line! Whether it's feedback, suggestions, or just random thoughts, feel free to shoot me a casual message. No need to make it formal!</h3>
+     </div>
+  <div class="container">
+    <form id="contactForm" name="submit-to-google-sheet">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" required>
+      
+      <label for="email">Email</label>
+      <input type="text" id="email" name="email" required>
+      
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="4" required></textarea>
+      <div id="msg"></div>
+      <input type="submit" value="Submit">
+    </form>
+    
+  </div>
+    </div>
+
+
+    
+
+    
+
+<script>
+function toggleNavbar() {
+    var x = document.getElementById("myNavbar");
+    var closeIcon = document.getElementById("closeIcon");
+    if (x.className.indexOf("responsive") === -1) {
+        x.className += " responsive";
+        closeIcon.style.display = "block"; // Display the close icon
+    } else {
+        x.className = x.className.replace(" responsive", "");
+        closeIcon.style.display = "none"; // Hide the close icon
+    }
+}
+</script>
+
+<script>
+
+
+function setLoading(isLoading) {
+    const submitButton = document.querySelector('input[type="submit"]');
+    if (isLoading) {
+        submitButton.disabled = true; // Disable the submit button
+        submitButton.value = 'Loading...'; // Change the text of the submit button to indicate loading
+    } else {
+        submitButton.disabled = false; // Enable the submit button
+        submitButton.value = 'Submit'; // Change the text of the submit button back to normal
+    }
+}
+
+
+
+  document.getElementById('contactForm').addEventListener('submit', handleSubmit);
+   const form =document.forms['submit-to-google-sheet']
+  async function handleSubmit(e) {
+    console.log("?")
+    e.preventDefault();
+    setLoading(true);
+    const formData = new FormData(e.target);
+    const name = formData.get('name');
+    const email = formData.get('email');
+    const requirements = formData.get('message');
+
+    try {
+      const scripturl = "https://script.google.com/macros/s/AKfycbxN9Bcr35FQziYbNzcj2IvkMXLEdCL0_GZUZhxxfk-og6oyRtVso4UHVdqm4GY-OFU/exec"
+      const response = await fetch(scripturl, {
+        method: 'POST',
+        body: new URLSearchParams(formData),
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded',
+        },
+      });
+
+      if (response.ok) {
+        showMessage('We have received your mail, Thank you.');
+        clearForm();
+      } else {
+        showMessage('There is some technical issue in sending information, try again after sometime');
+      }
+    } catch (error) {
+      showMessage('There is some technical issue in sending information, try again after sometime');
+    } finally {
+      setLoading(false);
+    }
+  }
+
+  function showMessage(message) {
+    document.getElementById('msg').innerText = message;
+    setTimeout(() => {
+      document.getElementById('msg').innerText = '';
+    }, 2500);
+  }
+
+  function clearForm() {
+    document.getElementById('name').value = '';
+    document.getElementById('email').value = '';
+    document.getElementById('message').value = '';
+  }
+</script>
+
+</body>
+</html>
